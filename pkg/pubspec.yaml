@@ -1,0 +1,19 @@
+name: flutter_draggable_widget
+description: "A Flutter package for creating draggable widgets on any screen."
+version: 0.0.1
+homepage: https://github.com/Hamad-Anwar/Flutter-Draggable-Widget-Package
+
+environment:
+  sdk: '>=3.2.5 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  bloc: ^8.1.3
+  flutter_bloc: ^8.1.4
+  equatable: ^2.0.5
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
