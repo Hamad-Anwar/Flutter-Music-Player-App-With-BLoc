@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_draggable_widget/draggable_widget.dart';
 import 'package:music/bloc/album_bloc/album_bloc.dart';
 import 'package:music/bloc/home_bloc/home_event.dart';
 import 'package:music/view/common_widget/app_bar.dart';

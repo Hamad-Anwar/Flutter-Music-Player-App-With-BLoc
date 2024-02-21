@@ -7,7 +7,6 @@ import 'package:music/bloc/home_bloc/home_bloc.dart';
 import 'package:music/bloc/player_bloc/player_bloc.dart';
 import 'package:music/db_helper/db_helper.dart';
 import 'package:music/res/app_colors.dart';
-import 'package:music/test_screen.dart';
 import 'package:music/view/splash/splash.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

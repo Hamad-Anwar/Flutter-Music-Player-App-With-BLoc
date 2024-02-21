@@ -49,8 +49,6 @@ dependencies:
   on_audio_query:
   layout_pro:
   shimmer_effect:
-  flutter_draggable_widget:
-    path: pkg/
 
 dev_dependencies:
   flutter_test:
