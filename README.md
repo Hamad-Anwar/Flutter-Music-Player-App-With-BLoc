@@ -28,7 +28,7 @@ Include some attractive screenshots of your app to give potential users a visual
 
 **Get Started:**
 
-1. **Clone the repository:** `git clone https://github.com/yourusername/your-repo.git`
+1. **Clone the repository:** `git clone https://github.com/Hamad-Anwar/Flutter-Music-Player-App-With-BLoc.git`
 2. **Install dependencies:** `flutter pub get`
 3. **Connect your device or start an emulator.**
 4. **Run the app:** `flutter run`
