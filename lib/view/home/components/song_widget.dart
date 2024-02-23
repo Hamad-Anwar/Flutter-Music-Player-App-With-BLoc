@@ -98,6 +98,7 @@ class SongWidget extends StatelessWidget {
                         onTap: () {
                           Navigator.pop(context);
                           context.read<HomeBloc>().add(AddToFavouriteEvent(file: file));
+
                         },
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,

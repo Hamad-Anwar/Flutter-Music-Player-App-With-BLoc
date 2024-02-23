@@ -57,7 +57,8 @@ class HomeBloc extends Bloc<HomeEvents,HomeState>{
      await dbHelper.insert(event.file);
       favouriteSongs.add(event.file);
     }
-    emit(state.copyWith(favouriteSongs: List.from(favouriteSongs)));
+    add(GetFavSongEvent());
+    // emit(state.copyWith(favouriteSongs: List.generate(favouriteSongs.length, (index) => favouriteSongs[index])));
   }
   Future<void> _onAddToAlbumEvent(AddToAlbum event,Emitter<HomeState> emit) async {
     try{
