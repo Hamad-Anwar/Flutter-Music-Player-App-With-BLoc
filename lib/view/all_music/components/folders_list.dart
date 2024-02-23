@@ -4,7 +4,7 @@ import 'package:layout_pro/responsive_layout.dart';
 import 'package:music/bloc/album_bloc/album_bloc.dart';
 import 'package:music/bloc/album_bloc/album_event.dart';
 import 'package:music/bloc/album_bloc/album_state.dart';
-import 'package:music/view/common_widget/soft_button.dart';
+
 import '../../../res/app_colors.dart';
 class FolderList extends StatelessWidget {
   const FolderList({super.key});

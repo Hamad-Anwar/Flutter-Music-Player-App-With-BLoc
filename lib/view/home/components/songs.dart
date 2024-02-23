@@ -8,6 +8,7 @@ import 'package:music/utils/utils.dart';
 import 'package:music/view/all_music/all_music.dart';
 import 'package:music/view/home/components/song_widget.dart';
 import 'package:music/view/player/player.dart';
+
 import '../../../res/app_colors.dart';
 
 class SongsList extends StatelessWidget {

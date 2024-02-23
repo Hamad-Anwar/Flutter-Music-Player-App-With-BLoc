@@ -46,6 +46,7 @@
 // }
 
 import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:music/res/app_colors.dart';
 import 'package:music/res/app_images.dart';
@@ -61,8 +62,10 @@ class Utils{
   }
   static Future<bool> requestPermission()async{
     var status = await Permission.storage.status;
-    var status1 = await Permission.audio.status;
-    if (status.isDenied || status1.isDenied) {
+    if(status.isGranted){
+      return true;
+    }
+    else if (status.isDenied) {
       Map<Permission, PermissionStatus> statuses = await [
         Permission.storage,
         Permission.audio,
@@ -74,7 +77,7 @@ class Utils{
         return false;
       }
     }
-      return true;
+    return false;
   }
   static String getGreetingMessage() {
     DateTime now = DateTime.now();

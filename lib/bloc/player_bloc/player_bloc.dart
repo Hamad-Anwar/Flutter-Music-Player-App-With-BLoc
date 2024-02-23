@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +8,6 @@ import 'package:music/db_helper/db_helper.dart';
 import 'package:music/model/audio_file_model.dart';
 
 part 'player_event.dart';
-
 part 'player_state.dart';
 
 class PlayerBloc extends Bloc<PlayerEvent, PlayerState> {
@@ -114,8 +114,8 @@ class PlayerBloc extends Bloc<PlayerEvent, PlayerState> {
                 width: 10,
               ),
               InkWell(
-                onTap: () {
-                  dbHelper.delete(event.file.name.toString());
+                onTap: () async {
+                  await dbHelper.delete(event.file.name.toString());
                   Navigator.pop(context);
                   emit(state.copyWith(isFavourite: false));
                 },
@@ -132,8 +132,9 @@ class PlayerBloc extends Bloc<PlayerEvent, PlayerState> {
         },
       );
     } else {
-      dbHelper.insert(event.file);
+      await dbHelper.insert(event.file);
       emit(state.copyWith(isFavourite: true));
+
     }
   }
 

@@ -6,7 +6,6 @@ import 'package:music/bloc/home_bloc/home_event.dart';
 import 'package:music/bloc/home_bloc/home_state.dart';
 import 'package:music/db_helper/db_helper.dart';
 import 'package:music/model/audio_file_model.dart';
-import 'package:music/utils/utils.dart';
 import 'package:music/view_model/services/audio_query_services.dart';
 
 class HomeBloc extends Bloc<HomeEvents,HomeState>{
@@ -52,17 +51,16 @@ class HomeBloc extends Bloc<HomeEvents,HomeState>{
   Future<void> _onAddToFavEvent(AddToFavouriteEvent event,Emitter<HomeState> emit) async {
     bool alreadyExist=await dbHelper.isFavoriteExists(event.file.name!);
     if(alreadyExist){
-      dbHelper.delete(event.file.name!);
+      await dbHelper.delete(event.file.name!);
       favouriteSongs.remove(event.file);
     }else{
-      dbHelper.insert(event.file);
+     await dbHelper.insert(event.file);
       favouriteSongs.add(event.file);
     }
     emit(state.copyWith(favouriteSongs: List.from(favouriteSongs)));
   }
   Future<void> _onAddToAlbumEvent(AddToAlbum event,Emitter<HomeState> emit) async {
     try{
-
       if(Directory('/storage/emulated/0/Music').existsSync()){
       }else{
         Directory('/storage/emulated/0/Music').createSync(recursive: true);

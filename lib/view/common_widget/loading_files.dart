@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:layout_pro/responsive_layout.dart';
-import 'package:music/view/home/components/song_widget.dart';
 import 'package:shimmer_effect/shimmer_effect.dart';
 
 import '../../res/app_colors.dart';

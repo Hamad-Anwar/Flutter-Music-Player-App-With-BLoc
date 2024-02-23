@@ -10,7 +10,6 @@ import 'package:music/view/common_widget/soft_button.dart';
 import '../../../bloc/home_bloc/home_bloc.dart';
 import '../../../bloc/player_bloc/player_bloc.dart';
 import '../../../res/app_svg.dart';
-import '../../player/player.dart';
 
 class SongWidget extends StatelessWidget {
   const SongWidget({super.key, required this.image, required this.name, required this.length, required this.file});

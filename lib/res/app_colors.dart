@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 
 Color backgroundColor = const Color(0xFFF1F2F6);

@@ -6,6 +6,7 @@ import 'package:music/view/common_widget/app_bar.dart';
 import 'package:music/view/player/components/song_bottom_contianer.dart';
 import 'package:music/view/player/components/song_controllers.dart';
 import 'package:music/view/player/components/song_title.dart';
+
 import 'components/song_circle_container.dart';
 class Player extends StatelessWidget {
   const Player({super.key, required this.file, required this.image});

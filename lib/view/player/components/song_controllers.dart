@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -20,7 +19,8 @@ class SongControllers extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         // SvgPicture.asset(AppSvg.loop, width: 20,),
-        const Icon(Icons.volume_down_alt,color: Colors.black,),
+        GestureDetector(
+            child: const Icon(Icons.volume_down_alt,color: Colors.black,)),
         const SizedBox(width: 20,),
         GestureDetector(
           onTap: () => context.read<PlayerBloc>().add(OnTapBackwardEvent()),
@@ -34,8 +34,12 @@ class SongControllers extends StatelessWidget {
           padding: 0,
           icon: GestureDetector(
             onTap: () async {
-              context.read<PlayerBloc>().add(OnTapFavouriteEvent(file: file,context: context));
-              Timer(Duration(milliseconds: 500), () {
+              try{
+                context.read<PlayerBloc>().add(OnTapFavouriteEvent(file: file,context: context));
+              }catch(_){
+
+              }
+              Timer(const Duration(milliseconds: 500), () {
                 context.read<HomeBloc>().add(GetFavSongEvent());
               });
 

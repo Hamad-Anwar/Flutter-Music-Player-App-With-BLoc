@@ -7,6 +7,7 @@ import 'package:music/view/common_widget/loading_files.dart';
 import 'package:music/view/home/components/home_top_box.dart';
 import 'package:music/view/home/components/recently_played_list.dart';
 import 'package:music/view/home/components/songs.dart';
+
 import '../../bloc/home_bloc/home_bloc.dart';
 import '../../bloc/home_bloc/home_state.dart';
 import 'components/home_bottom_player.dart';
@@ -43,10 +44,10 @@ class _HomeViewState extends State<HomeView> {
                   height: 30,
                 ),
                 const CustomAppBar(),
-                // const SizedBox(
-                //   height: 40,
-                // ),
-                // const HomeIntroBox(),
+                const SizedBox(
+                  height: 40,
+                ),
+                const HomeIntroBox(),
                 const RecentlyPlayedList(),
                 Expanded(
                   child: BlocBuilder<HomeBloc, HomeState>(

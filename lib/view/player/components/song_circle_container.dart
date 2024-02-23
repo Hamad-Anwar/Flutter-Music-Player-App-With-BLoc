@@ -5,7 +5,6 @@ import 'package:music/bloc/player_bloc/player_bloc.dart';
 import 'package:music/model/audio_file_model.dart';
 
 import '../../../res/app_colors.dart';
-import '../../../res/app_icons.dart';
 import '../../../res/app_svg.dart';
 import '../../common_widget/soft_button.dart';
 

@@ -5,6 +5,7 @@ import 'package:music/view/all_music/components/folders_list.dart';
 import 'package:music/view/all_music/components/song_list.dart';
 import 'package:music/view/common_widget/app_bar.dart';
 import 'package:music/view/home/components/home_bottom_player.dart';
+
 import '../../bloc/album_bloc/album_bloc.dart';
 import '../../bloc/album_bloc/album_state.dart';
 

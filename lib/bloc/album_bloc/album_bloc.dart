@@ -4,7 +4,6 @@ import 'package:music/bloc/album_bloc/album_event.dart';
 import 'package:music/bloc/album_bloc/album_state.dart';
 import 'package:music/bloc/home_bloc/home_state.dart';
 import 'package:music/view_model/services/audio_query_services.dart';
-import 'package:on_audio_query/on_audio_query.dart';
 
 class AlbumBloc extends Bloc<AlbumEvent, AlbumState> {
   final PageController pageController;

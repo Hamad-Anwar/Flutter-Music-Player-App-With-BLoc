@@ -1,10 +1,11 @@
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:music/res/app_images.dart';
 import 'package:music/res/app_svg.dart';
+
 import '../../../res/app_colors.dart';
-import '../../../res/app_icons.dart';
 
 class HomeIntroBox extends StatelessWidget {
   const HomeIntroBox({super.key});
