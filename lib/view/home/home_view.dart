@@ -78,6 +78,7 @@ class _HomeViewState extends State<HomeView> {
                               Spacer(),
                               InkWell(
                                 // onTap: () => Utils.go(context: context, screen: AllMusicAlbum()),
+
                                 child: Text(
                                   'See all',
                                   style:

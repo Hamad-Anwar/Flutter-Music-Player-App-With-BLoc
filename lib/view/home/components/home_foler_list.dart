@@ -31,7 +31,10 @@ class HomeFolderList extends StatelessWidget {
             ),
             Spacer(),
             InkWell(
-              onTap: () => Utils.go(context: context, screen: AllMusicAlbum()),
+              onTap: () {
+                context.read<AlbumBloc>().add(GetFolderEvent());
+                Utils.go(context: context, screen: AllMusicAlbum());
+              },
               child: const Text(
                 'See all',
                 style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),

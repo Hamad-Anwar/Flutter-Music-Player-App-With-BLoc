@@ -19,23 +19,31 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     SplashServices.isFirstTime(context: context);
     // context.read<HomeBloc>().add(GetFilesEvent());
-    // context.read<AlbumBloc>().add(GetFolderEvent());
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: CircularSoftButton(
-          radius: 80,
-          icon: Container(
-            margin: const EdgeInsets.all(5),
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(image: AssetImage(AppIcons.splashIcons,),
-              fit: BoxFit.cover
-              )
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            CircularSoftButton(
+              radius: 45,
+              padding: 10,
+              icon: Container(
+                margin: const EdgeInsets.all(5),
+                child: Center(
+                  child: Icon(Icons.play_arrow_rounded,color: Colors.blue,size: 60,),
+                ),
+              ),
             ),
-          ),
+            Text('Music',style: TextStyle(
+              color: Colors.blue,
+              fontWeight: FontWeight.bold,
+              fontSize: 30
+            ),)
+          ],
         ),
       ),
     );

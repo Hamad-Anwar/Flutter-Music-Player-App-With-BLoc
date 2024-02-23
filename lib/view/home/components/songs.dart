@@ -9,6 +9,8 @@ import 'package:music/view/all_music/all_music.dart';
 import 'package:music/view/home/components/song_widget.dart';
 import 'package:music/view/player/player.dart';
 
+import '../../../bloc/album_bloc/album_bloc.dart';
+import '../../../bloc/album_bloc/album_event.dart';
 import '../../../res/app_colors.dart';
 
 class SongsList extends StatelessWidget {
@@ -33,7 +35,11 @@ class SongsList extends StatelessWidget {
             ),
             Spacer(),
             InkWell(
-              onTap: () => Utils.go(context: context, screen: AllMusicAlbum()),
+              // onTap: () => ),
+              onTap: () {
+                context.read<AlbumBloc>().add(GetFolderEvent());
+                Utils.go(context: context, screen: AllMusicAlbum());
+              },
               child: const Text(
                 'See all',
                 style:
