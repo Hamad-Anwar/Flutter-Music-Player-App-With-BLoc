@@ -62,22 +62,24 @@ class Utils{
   }
   static Future<bool> requestPermission()async{
     var status = await Permission.storage.status;
-    if(status.isGranted){
+    var status1 = await Permission.audio.status;
+    if(status.isGranted && status1.isGranted){
       return true;
     }
-    else if (status.isDenied) {
+    else{
       Map<Permission, PermissionStatus> statuses = await [
         Permission.storage,
         Permission.audio,
+        Permission.manageExternalStorage,
       ].request();
       var temp = await Permission.storage.status;
-      if(temp.isGranted){
+      var temp1 = await Permission.audio.status;
+      if(temp.isGranted && temp1.isGranted){
         return true;
       }else {
         return false;
       }
     }
-    return false;
   }
   static String getGreetingMessage() {
     DateTime now = DateTime.now();
