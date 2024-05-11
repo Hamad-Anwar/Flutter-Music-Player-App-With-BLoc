@@ -61,9 +61,8 @@ class Utils{
     return AppImages.imageList[Random().nextInt(13)]!;
   }
   static Future<bool> requestPermission()async{
-    var status = await Permission.storage.status;
     var status1 = await Permission.audio.status;
-    if(status.isGranted && status1.isGranted){
+    if(status1.isGranted){
       return true;
     }
     else{
@@ -72,9 +71,8 @@ class Utils{
         Permission.audio,
         Permission.manageExternalStorage,
       ].request();
-      var temp = await Permission.storage.status;
       var temp1 = await Permission.audio.status;
-      if(temp.isGranted && temp1.isGranted){
+      if(temp1.isGranted){
         return true;
       }else {
         return false;
